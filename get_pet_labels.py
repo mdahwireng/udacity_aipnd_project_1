@@ -17,7 +17,7 @@
 #
 ##
 # Imports python modules
-from os import listdir
+from os import listdir, path
 
 # TODO 2: Define get_pet_labels function below please be certain to replace None
 #       in the return statement with results_dic dictionary that you create 
@@ -66,8 +66,8 @@ def get_pet_labels(image_dir):
            #          accessed by in_files[idx]. Be certain to place the 
            #          extracted dog breed name in the variable pet_label 
            #          that's created as an empty string ABOVE
-           filename = in_files[idx].lower()
-           temp_names = filename.split('_')
+           filename = path.splitext(in_files[idx].lower())
+           temp_names = filename[0].split('_')
            for word in temp_names:
                 if word.isalpha():
                     pet_label += word + ' '
