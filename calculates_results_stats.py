@@ -168,7 +168,7 @@ def calculates_results_stats(results_dic):
     #           will need to be multiplied by 100.0 to provide the percentage.
     #    
     # Calculates % correct breed of dog
-    results_stats_dic['pct_correct_breed'] = (results_stats_dic['n_correct_breed'] / results_stats_dic['n_images']) * 100
+    results_stats_dic['pct_correct_breed'] = (results_stats_dic['n_correct_breed'] / results_stats_dic['n_dogs_img']) * 100
 
     # Calculates % correct not-a-dog images
     # Uses conditional statement for when no 'not a dog' images were submitted 
